@@ -1,25 +1,146 @@
-VER 3 0000000001000004 "Daggers" "INV_MISC_QUESTIONMARK"
-#showtooltip Maexxna's Fang
-/equipslot 16 Maexxna's Fang
-/equipslot 17 Harbinger of Doom
+VER 3 000000000000000F "+ Cancel Stealth" "133886"
+/cancelaura prowl
+/cancelform [nostealth]
 END
-VER 3 0000000001000016 "MH Crippling P." "INV_MISC_QUESTIONMARK"
-#showtooltip Crippling Poison II
-/use Crippling Poison II
-/use 16
+VER 3 000000000000001A "+ Fishing" "134325"
+/equip Fishing Pole
+/equip Blump Family Fishing Pole
+/equip Strong Fishing Pole
+/equip Big Iron Fishing Pole
+/equip Nat Pagle's Extreme Angler FC-5000
+/cast fishing
 END
-VER 3 0000000001000013 "MH Instant P." "INV_MISC_QUESTIONMARK"
-#showtooltip Instant Poison VI
-/use Instant Poison VI
-/use 16
+VER 3 000000000000000A "+Attack" "132269"
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
 END
-VER 3 0000000001000017 "OH Crippling P." "INV_MISC_QUESTIONMARK"
-#showtooltip Crippling Poison II
-/use Crippling Poison II
-/use 17
+VER 3 0000000000000001 "+Follow" "136054"
+/follow
 END
-VER 3 0000000001000014 "OH Instant P." "INV_MISC_QUESTIONMARK"
-#showtooltip Instant Poison VI
-/use Instant Poison VI
-/use 17
+VER 3 0000000000000018 "+follow naestra" "INV_MISC_QUESTIONMARK"
+/tar naestra
+/follow
+END
+VER 3 000000000000001B "+Lure" "INV_MISC_QUESTIONMARK"
+#showtooltip Aquadynamic Fish Attractor
+/use Aquadynamic Fish Attractor
+/use Fishing Pole
+/use Blump Family Fishing Pole
+/use Strong Fishing Pole
+/use Big Iron Fishing Pole
+/use Nat Pagle's Extreme Angler FC-5000
+END
+VER 3 000000000000000E "+Shadowmeld" "132089"
+#showtooltip Shadowmeld
+/dismount
+/cancelform
+/stopcasting
+/cast Shadowmeld
+END
+VER 3 0000000000000002 "+Shoot" "INV_MISC_QUESTIONMARK"
+#sowtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [worn:Thrown] !Throw; [worn:Bows] !Shoot Bow; [worn:Guns] !Shoot Gun; [worn:Crossbows] !Shoot Crossbow; [worn:Wands] !shoot
+END
+VER 3 0000000000000017 "+Timer" "134377"
+/timer
+END
+VER 3 0000000000000003 "+Trade" "133785"
+/trade
+END
+VER 3 000000000000000C "+Trinket 1" "INV_MISC_QUESTIONMARK"
+#showtooltip 13
+/use 13
+END
+VER 3 000000000000000B "+Trinket 2" "INV_MISC_QUESTIONMARK"
+#showtooltip 14
+/use 14
+END
+VER 3 0000000000000019 "D Challeng Roar" "INV_MISC_QUESTIONMARK"
+#showtooltip Challenging Roar
+/cancelform [noform:1]
+/cast [noform:1] Dire Bear Form
+/cast [form:1] Challenging Roar
+/startattack
+END
+VER 3 0000000000000011 "D Dash" "INV_MISC_QUESTIONMARK"
+#showtooltip Dash
+/cancelform [noform:3]
+/cast [noform:3] Cat Form
+/cast Dash
+END
+VER 3 0000000000000016 "D Decurse" "INV_MISC_QUESTIONMARK"
+#showtooltip Remove Curse
+/cast [@mouseover,help][help][@player] Remove Curse
+END
+VER 3 0000000000000013 "D Enrage" "INV_MISC_QUESTIONMARK"
+#showtooltip [form:1] Enrage; Tiger's Fury
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [form:1] Enrage; [form:3] Tiger's Fury
+/startattack
+END
+VER 3 0000000000000014 "D Growl" "INV_MISC_QUESTIONMARK"
+#showtooltip Growl
+/cancelform [noform:1]
+/cast [noform:1] Dire Bear Form
+/cast [form:1] Growl
+/startattack
+END
+VER 3 0000000000000010 "D Prowl" "INV_MISC_QUESTIONMARK"
+#showtooltip Prowl
+/cancelform [noform:3]
+/cast [noform:3] Cat Form
+/cast !Prowl
+/stopattack
+END
+VER 3 0000000000000015 "D Rake" "INV_MISC_QUESTIONMARK"
+#showtooltip Rake
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [form:3] Rake
+/startattack [nostealth]
+END
+VER 3 0000000000000012 "D Shred Maul" "INV_MISC_QUESTIONMARK"
+#showtooltip [form:1] Maul; [stealth] Ravage; [nostealth] Shred
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [form:1] Maul; [form:3, stealth] Ravage; [form:3, nostealth] Shred
+/startattack [nostealth]
+END
+VER 3 0000000000000009 "Demon" "136172"
+#showtooltip
+/cast sacrifice
+/cast Fire Shield
+/cast Seduction
+END
+VER 3 0000000000000008 "Drain Soul" "134400"
+#showtooltip Drain Soul
+/stopcasting
+/cast Drain Soul(Rank 1)
+END
+VER 3 0000000000000006 "PetAttack" "132140"
+/dismount
+/petattack [@mouseover,nodead,harm][]
+/cast dash
+/cast dive
+/petattack [target=Fire Nova Totem]
+/petattack [target=Grounding Totem]
+/petattack [target=Poison Cleansing totem]
+/petattack [target=Earthbind Totem]
+END
+VER 3 0000000000000007 "PetPassive" "132120"
+#showtooltip
+/petpassive
+END
+VER 3 000000000000000D "Prince Nazjak" "132092"
+/tar prince nazjak
+END
+VER 3 0000000000000004 "Scout ID" "134153"
+/script print(UnitGUID("target"))
+END
+VER 3 0000000000000005 "Scout Logout" "136122"
+/run local f=CreateFrame("Frame")f:RegisterEvent("PLAYER_CAMPING")f:SetScript("OnEvent", function() local p=StaticPopup_Visible("CAMP")_G[p.."Button1"]:Click()end)
 END
