@@ -49,7 +49,7 @@ also works, but it throws away your current target. That version is in the user'
 **Assist + melee attack (melee follower):**
 ```
 #showtooltip
-/assist [nomod] Main
+/assist Main
 /startattack
 /cast Sinister Strike
 ```
@@ -57,11 +57,11 @@ also works, but it throws away your current target. That version is in the user'
 **Assist + spell (caster follower):**
 ```
 #showtooltip
-/assist [nomod] Main
+/assist Main
 /cast Frostbolt
 ```
-Hold Shift to skip the assist and cast at the follower's own target. When Main has no target,
-`/assist` prints an error and the follower keeps its own target.
+When Main has no target, `/assist` prints an error and the follower keeps its own target. No
+modifier keys are used, because the user's modifier combinations are all bound.
 
 **Cast at Main's target without changing target (2-person party only):**
 ```
@@ -74,18 +74,15 @@ Hold Shift to skip the assist and cast at the follower's own target. When Main h
 #showtooltip
 /cast [@mouseover,help,nodead][@Main,help,nodead][@player] Flash Heal
 ```
-With `[mod:shift]`, heal yourself:
-```
-#showtooltip
-/cast [mod:shift,@player][@mouseover,help,nodead][@Main,nodead] Flash Heal
-```
+To heal yourself, hover the mouse over your own unit frame.
 
-**Healer that DPSes only while Alt is held:**
+**Healer: heal Main when Main's target isn't hostile, otherwise DPS Main's target:**
 ```
 #showtooltip
-/assist [mod:alt] Main
-/cast [mod:alt,harm] Smite; [@Main,nodead] Heal
+/cast [@party1target,harm,nodead] Smite; [@Main,nodead] Heal
 ```
+(2-person party.) This is risky, because it never heals while Main's target is hostile. It's
+better to have separate heal and DPS buttons.
 
 **Hunter or Warlock follower: send the pet at Main's target:**
 ```

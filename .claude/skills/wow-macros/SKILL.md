@@ -48,6 +48,11 @@ Never assume a Forever behavior applies to Era, or the other way round.
    `!Attack`, `!Shoot`, `!Stealth`, `!Prowl`, `!Cat Form`, `!Aspect of the Hawk`.
 7. List conditional clauses from most specific to most general, and use a bare `[]` as the
    fallback (it means the current target). Separate clauses with `;`.
+8. **Never use modifier keys** (`[mod]`, `[mod:shift/ctrl/alt]`, `[nomod]`) or `[button:n]`.
+   The user's Shift, Ctrl and Alt key combinations are all bound to other things. To put more
+   than one action on a button, use conditions that depend on game state instead: `[combat]`,
+   `[stealth]`, `[form:n]`, `[pet:Family]`, `[harm]`/`[help]`, `[worn:type]`, `[swimming]`,
+   `[channeling]`, or a `/castsequence`.
 
 ## 3. The user's conventions (copy these)
 
@@ -145,9 +150,17 @@ END
 - **Icon:** `"INV_MISC_QUESTIONMARK"` is the question-mark icon, which becomes dynamic with
   `#showtooltip`. A number is the icon file ID; you can find these on Wowhead icon pages.
 - **Slot limits:** Classic Era has 120 account-wide and 18 per character. `zt_druid` is already
-  full at 18, and `account1` holds 103. Retail now has 30 per character. Forever ⚠ hasn't
-  published its limits; check in-game with
-  `/run print(MAX_ACCOUNT_MACROS, MAX_CHARACTER_MACROS)`. Tell the user when a file is full.
+  full at 18, and `account1` holds 103. For **Forever, assume the modern limits: 120
+  account-wide and 30 per character.** This is the user's decision, backed by a beta report from
+  foreverdb.net. Blizzard hasn't confirmed it; check with
+  `/run print(MAX_ACCOUNT_MACROS, MAX_CHARACTER_MACROS)`.
+  The account-wide limit is **shared by every class**, so Hunter, Warrior and Rogue macros compete
+  for the same 120 slots. Tell the user when a file is full or nearly full.
+  Suggested split for Forever: the account tab holds `+` generic macros plus the classes with
+  only a few macros. Each main character keeps its own class macros in its 30 character slots.
+- **`account1` and `account2` are separate WoW accounts.** Each has its own WTF folder, so
+  generic `+` macros have to exist in both files on purpose. Don't treat that as duplication. When
+  you change a generic macro, offer to change it in the other account file too.
 - Repo file names: `accountN_macros-cache.txt` for account-wide macros and
   `<realm>_<class>_macros-cache.txt` for character macros. In the game install they are:
   - Account: `World of Warcraft\_classic_era_\WTF\Account\<ACCOUNT>\macros-cache.txt`
@@ -164,7 +177,25 @@ END
 awk '/^VER/{n=$0;b="";next}/^END/{l=length(b); if(l>255) print "TOO LONG ("l"): "n; next}{sub(/\r$/,""); b=(b==""?$0:b"\n"$0)}' FILE
 ```
 
-## 6. Things to refuse or warn about
+## 6. Managing macro slots
+
+When a file is getting full, apply these in order:
+
+1. **Where it belongs:** a macro goes in the account file only if **2 or more characters on
+   that account** use it. Otherwise it goes in that character's file. Class macros for a class
+   you have only one of belong in the character file.
+2. **Remove plain spell macros:** a macro that only says `#showtooltip` + `/cast Spell` with
+   nothing else adds nothing. Put the spell on the bar directly from the spellbook or pet bar.
+   Examples are `H Trueshot Aura`, `H Furious Howl`, `H Pet Dismiss` and `H Pet Passive`.
+3. **Combine using game-state conditions, never modifier keys:** for example, pet abilities by
+   `[pet:Family]`, stealth on and off in one toggle, or buff and scroll series as a
+   `/castsequence`.
+4. **Flag "generic" macros that aren't generic:** macros that depend on a race, profession or
+   specific item (Shadowmeld, Engineering bombs, Qiraji mounts, a specific dagger) belong in
+   character files.
+5. **Last resort:** an addon that adds macro slots, such as Mega Macro.
+
+## 7. Things to refuse or warn about
 
 - **Multiboxing (dual boxing) is allowed. Input broadcasting is banned.** Input broadcasting means
   software or hardware that sends one key press to several game clients. The rule is one key

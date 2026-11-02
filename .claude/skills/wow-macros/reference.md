@@ -127,8 +127,6 @@ Then heal in the order mouseover, then target, then focus, then yourself:
 ```
 - With `[help,nodead]` second, a friendly target wins over focus. When you're targeting the boss,
   the heal goes to the focused tank.
-- `[mod:shift,@focus]` forces the focus, and `[mod:alt,@player]` forces yourself. Put modifier
-  clauses **first**.
 - Other uses of focus: Polymorph or Sap on a second mob (`/cast [@focus,harm,nodead] Polymorph`),
   interrupts (`/cast [@focus,harm,nodead][] Counterspell`), and Misdirection-style tank
   helpers.
@@ -174,9 +172,18 @@ hasn't learned Aquatic Form yet has Cat Form at index 2. Check with
 #showtooltip
 /cast [@mouseover,help,nodead][help,nodead][@player] Flash Heal
 
-# Modifier variants on one button
+# Two actions on one button without modifier keys (game state decides)
 #showtooltip
-/cast [mod:ctrl] Goblin Sapper Charge; [mod:alt] Thorium Grenade; Iron Grenade
+/cancelaura [stealth] Stealth
+/cast [nostealth] !Stealth
+
+# Pet ability by pet family
+#showtooltip
+/cast [pet:Wolf] Furious Howl; [pet:Cat] Prowl; [pet:Bat] Dive
+
+# Buff series on pet, one press per scroll
+#showtooltip
+/castsequence [@pet] reset=60 Scroll of Agility IV, Scroll of Strength IV, Scroll of Stamina IV, Scroll of Protection IV
 
 # Stance-dance (press twice when not in the right stance)
 #showtooltip Overpower
