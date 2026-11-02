@@ -1,0 +1,84 @@
+VER 3 0000000001000005 "M Arcane Missile" "INV_MISC_QUESTIONMARK"
+#showtooltip Arcane Missiles
+/cast [nochanneling:Arcane Missiles] Arcane Missiles
+END
+VER 3 000000000100000F "M Blast Wave" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Blast Wave
+END
+VER 3 0000000001000007 "M Blink" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cancelaura Ice Block
+/cast blink
+END
+VER 3 000000000100000C "M Cold Snap FN" "INV_MISC_QUESTIONMARK"
+#showtooltip Frost Nova(Rank 1)
+/stopcasting
+/cancelaura Ice Block
+/cast Cold Snap
+/cast Frost Nova(Rank 1)
+END
+VER 3 000000000100000B "M Cold Snap IB" "INV_MISC_QUESTIONMARK"
+#showtooltip Ice Block
+/stopcasting
+/cancelaura Ice Block
+/cast Cold Snap
+/cast Ice Block
+END
+VER 3 0000000001000001 "M Counterspell" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast Counterspell
+END
+VER 3 0000000001000004 "M Decurse" "INV_MISC_QUESTIONMARK"
+#showtooltip Remove lesser Curse
+/cast [@mouseover,nodead,help][] Remove lesser Curse
+END
+VER 3 000000000100000A "M Fireball" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Fireball
+END
+VER 3 0000000001000009 "M Fireblast" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Fire Blast
+END
+VER 3 0000000001000006 "M Frost Nova" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cancelaura Ice Block
+/cast Frost Nova(Rank 1)
+END
+VER 3 0000000001000008 "M Frostbolt" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Frostbolt
+END
+VER 3 0000000001000002 "M Ice Block" "INV_MISC_QUESTIONMARK"
+#showtooltip Ice Block
+/stopcasting
+/cancelaura Ice Block
+/cast Ice Block
+END
+VER 3 0000000001000003 "M Polymorph" "INV_MISC_QUESTIONMARK"
+#showtooltip Polymorph
+/stopcasting
+/cast [@mouseover,nodead,harm][] Polymorph
+END
+VER 3 000000000100000D "M Pyroblast" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Pyroblast
+END
+VER 3 000000000100000E "M Scorch" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Scorch
+END

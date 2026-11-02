@@ -1,0 +1,25 @@
+VER 3 0000000001000004 "Daggers" "INV_MISC_QUESTIONMARK"
+#showtooltip Maexxna's Fang
+/equipslot 16 Maexxna's Fang
+/equipslot 17 Harbinger of Doom
+END
+VER 3 0000000001000016 "MH Crippling P." "INV_MISC_QUESTIONMARK"
+#showtooltip Crippling Poison II
+/use Crippling Poison II
+/use 16
+END
+VER 3 0000000001000013 "MH Instant P." "INV_MISC_QUESTIONMARK"
+#showtooltip Instant Poison VI
+/use Instant Poison VI
+/use 16
+END
+VER 3 0000000001000017 "OH Crippling P." "INV_MISC_QUESTIONMARK"
+#showtooltip Crippling Poison II
+/use Crippling Poison II
+/use 17
+END
+VER 3 0000000001000014 "OH Instant P." "INV_MISC_QUESTIONMARK"
+#showtooltip Instant Poison VI
+/use Instant Poison VI
+/use 17
+END

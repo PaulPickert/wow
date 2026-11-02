@@ -1,0 +1,54 @@
+VER 3 0000000001000017 "Flask-DPS" "132277"
+/run EquipSet("Flask")
+/use Diamond Flask
+/run EquipSet("DPS")
+END
+VER 3 0000000001000016 "Flask-Tank" "132738"
+/run EquipSet("Flask")
+/use Diamond Flask
+/run EquipSet("Tank")
+END
+VER 3 000000000100000F "Shield Bash" "134400"
+#showtooltip Shield Bash
+/startattack
+/stopcasting [noworn:Shields]
+/equipslot 17 Malistar's Defender
+/equipslot 16 Perdition's Blade
+/cast [form:3,worn:Shields] Battle Stance
+/cast Shield Bash
+END
+VER 3 000000000100000D "Shield Block" "134400"
+#showtooltip Shield Block
+/startattack [combat,harm,nodead]
+/stopcasting [noworn:Shields]
+/equipslot 17 Malistar's Defender
+/equipslot 16 Perdition's Blade
+/cast Defensive Stance
+/cast Shield Block
+END
+VER 3 000000000100000E "Shield Wall" "134400"
+#showtooltip Shield Wall
+/startattack [combat,harm,nodead]
+/stopcasting [noworn:Shields]
+/equipslot 17 Malistar's Defender
+/equipslot 16 Perdition's Blade
+/cast Defensive Stance
+/cast Shield Wall
+END
+VER 3 000000000100000A "Shield Weapon" "132360"
+#showtooltip
+/stopcasting
+/cast Defensive Stance
+/equipslot 17 Malistar's Defender
+/equipslot 16 Perdition's Blade
+END
+VER 3 000000000100000B "Weapon DPS" "135271"
+#showtooltip
+/equipslot 16 Deathbringer
+/equipslot 17 Perdition's Blade
+END
+VER 3 0000000001000015 "Weapon Threat" "132393"
+#showtooltip
+/equipslot 16 Perdition's Blade
+/equipslot 17 Deathbringer
+END

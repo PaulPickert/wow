@@ -1,0 +1,78 @@
+VER 3 000000000100000B "Cure Disease" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Cure Disease
+END
+VER 3 0000000001000002 "Dispel Magic" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast [@mouseover,exists,nodead][] Dispel Magic
+END
+VER 3 000000000100000D "Dispel Magic Tar" "INV_MISC_QUESTIONMARK"
+#showtooltip Dispel Magic
+/dismount
+/cast [@target,harm][] Dispel Magic
+END
+VER 3 000000000100000F "Flash heal" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Flash heal
+END
+VER 3 000000000100000C "Heal" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] heal
+END
+VER 3 0000000001000010 "Heal DR" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] heal(rank 1)
+END
+VER 3 000000000100000E "Holy Fire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Holy Fire
+END
+VER 3 0000000001000003 "Lesser Heal" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Lesser heal
+END
+VER 3 0000000001000011 "Mana Burn" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Mana Burn
+END
+VER 3 000000000100000A "Mind Blast" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Mind Blast
+END
+VER 3 0000000001000009 "PW: Fortitude" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Power Word: Fortitude
+END
+VER 3 0000000001000001 "PW:Shield" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Power Word: Shield
+END
+VER 3 0000000001000005 "Renew" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,help][help][@player] Renew
+END
+VER 3 0000000001000008 "Smite" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Smite
+END
+VER 3 0000000001000007 "Starshards" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Starshards
+END
+VER 3 0000000001000006 "SW: Paid" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Shadow Word: Pain
+END

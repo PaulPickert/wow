@@ -1,0 +1,22 @@
+VER 3 0000000001000005 "pick cheap shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Pick Pocket
+/cast [stealth]cheap shot; [nostealth]kidney shot
+END
+VER 3 0000000001000003 "Riposte" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Riposte
+/startattack
+END
+VER 3 0000000001000001 "Weapons Backstab" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/equipslot 16 Pearl-handled Dagger
+/equipslot 17 
+END
+VER 3 0000000001000002 "Weapons Sinister" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/equipslot 16 Beazel's Basher
+/equipslot 17 Pearl-handled Dagger
+END

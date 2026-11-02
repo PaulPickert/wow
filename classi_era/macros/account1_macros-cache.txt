@@ -1,0 +1,589 @@
+VER 3 0000000000000082 "+ canc BoP Salv" "237563"
+/cancelaura Blessing of Protection
+/cancelaura Blessing of Salvation
+/cancelaura Greater Blessing of Salvation
+/cancelaura Arcane Intellect
+/cancelaura Arcane Brilliance
+END
+VER 3 000000000000009D "+ Light of Elune" "INV_MISC_QUESTIONMARK"
+#showtooltip Light of Elune
+/use [combat] Light of Elune
+END
+VER 3 000000000000006B "+Attack" "132269"
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+END
+VER 3 000000000000005F "+Boots" "134400"
+#showtooltip 8
+/use 8
+END
+VER 3 000000000000006C "+Cancel Stealth" "133886"
+/cancelaura stealth
+END
+VER 3 000000000000006A "+Coldrage Dagger" "135344"
+#showtooltip Coldrage Dagger
+/castsequence reset=2 coldrage dagger
+/equipslot 17 coldrage dagger
+END
+VER 3 0000000000000055 "+Dynamite" "134400"
+#showtooltip
+/cast Dense Dynamite
+END
+VER 3 0000000000000001 "+Fishing" "132149"
+/equip Fishing Pole
+/equip Blump Family Fishing Pole
+/equip Strong Fishing Pole
+/equip Big Iron Fishing Pole
+/equip Nat Pagle's Extreme Angler FC-5000
+/cast fishing
+END
+VER 3 0000000000000056 "+Follow" "136054"
+/follow
+END
+VER 3 000000000000001B "+Grenade/Sapper" "134400"
+#showtooltip
+/petpassive
+/stopattack
+/stopcasting
+/cast [mod:ctrl] Goblin Sapper Charge;[nomod] Iron Grenade;[mod:alt] Thorium Grenade
+END
+VER 3 0000000000000079 "+Head" "INV_MISC_QUESTIONMARK"
+#showtooltip 1
+/petpassive
+/stopattack
+/use 1
+END
+VER 3 0000000000000069 "+Juju of Chill" "134400"
+#showtooltip
+/use [@player] Juju Chill
+END
+VER 3 000000000000005A "+Juju of Might" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@player] Juju Might
+END
+VER 3 0000000000000007 "+Lure" "INV_MISC_QUESTIONMARK"
+#showtooltip Aquadynamic Fish Attractor
+/use Aquadynamic Fish Attractor
+/use Fishing Pole
+/use Blump Family Fishing Pole
+/use Strong Fishing Pole
+/use Big Iron Fishing Pole
+/use Nat Pagle's Extreme Angler FC-5000
+END
+VER 3 0000000000000061 "+Riding" "136103"
+#showtooltip
+/use Blue Qiraji Resonating Crystal
+/use Red Qiraji Resonating Crystal
+/use Reins of the Swift Stormsaber
+/use Reins of the Swift Frostsaber
+END
+VER 3 0000000000000052 "+Scout ID" "134153"
+/script print(UnitGUID("target"))
+END
+VER 3 000000000000005C "+Scout Logout" "136122"
+/run local f=CreateFrame("Frame")f:RegisterEvent("PLAYER_CAMPING")f:SetScript("OnEvent", function() local p=StaticPopup_Visible("CAMP")_G[p.."Button1"]:Click()end)
+END
+VER 3 000000000000004C "+Shadowmeld" "INV_MISC_QUESTIONMARK"
+#showtooltip Shadowmeld
+/dismount
+/cancelform
+/stopcasting
+/cast !Shadowmeld
+/cast Prowl(Rank 3)
+END
+VER 3 0000000000000031 "+Shoot" "INV_MISC_QUESTIONMARK"
+#sowtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [worn:Thrown] !Throw; [worn:Bows] !Shoot Bow; [worn:Guns] !Shoot Gun; [worn:Crossbows] !Shoot Crossbow; [worn:Wands] !shoot
+END
+VER 3 000000000000006D "+Stealth" "132320"
+#showtooltip
+/cast !stealth
+END
+VER 3 0000000000000078 "+Target" "133572"
+/cleartarget
+/tar Wandering eye
+/tar Vekniss warrior
+/tar stoneskin gargoyle
+/tar firemaw
+/script SetRaidTarget("target", 7);
+END
+VER 3 0000000000000057 "+Timer" "134377"
+/timer
+END
+VER 3 0000000000000051 "+Trade" "133785"
+/trade
+END
+VER 3 0000000000000045 "+Trinket 1" "INV_MISC_QUESTIONMARK"
+#showtooltip 13
+/use 13
+END
+VER 3 0000000000000046 "+Trinket 2" "INV_MISC_QUESTIONMARK"
+#showtooltip 14
+/use 14
+END
+VER 3 0000000000000034 "H Aimed Shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/Cast !Aimed Shot
+END
+VER 3 0000000000000036 "H Arcane Shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast arcane Shot
+/cast !Auto Shot
+END
+VER 3 000000000000003C "H Asp. Cheetah" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelaura Aspect of the Cheetah
+/cast Aspect of the Cheetah
+END
+VER 3 0000000000000039 "H Asp. Hawk" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelaura Aspect of the Cheetah
+/cast !Aspect of the Hawk
+END
+VER 3 000000000000003A "H Asp. Monkey" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelaura Aspect of the Cheetah
+/cast !Aspect of the Monkey
+END
+VER 3 0000000000000043 "H Asp. Pack" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelaura Aspect of the Pack
+/cast Aspect of the Pack
+END
+VER 3 0000000000000033 "H Auto Shot" "132271"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast !Auto Shot
+END
+VER 3 000000000000004D "H Deterrence" "132369"
+#showtooltip deterrence
+/cast [combat] deterrence
+END
+VER 3 0000000000000042 "H Disengage" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast Disengage
+END
+VER 3 000000000000003B "H Eagle Eye" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast !Eagle Eye
+END
+VER 3 000000000000003E "H Feign Death" "INV_MISC_QUESTIONMARK"
+#showtooltip Feign Death
+/petpassive
+/stopattack
+/cast [combat] Feign Death
+END
+VER 3 0000000000000037 "H Flare" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] Flare
+END
+VER 3 0000000000000050 "H Furious Howl" "132203"
+#showtooltip furious howl
+/cast furious howl
+END
+VER 3 0000000000000041 "H Hunter's Mark" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,nodead,harm][] Hunter's Mark
+END
+VER 3 000000000000003F "H Melee" "INV_MISC_QUESTIONMARK"
+#showtooltip Wing Clip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Raptor Strike
+/cast Wing Clip
+/cast Mongoose Bite
+/startattack
+END
+VER 3 0000000000000038 "H Mongoose Bite" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Mongoose Bite
+/cast Counterattack
+/cast Raptor Strike
+/startattack
+END
+VER 3 0000000000000040 "H Multi-Shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Multi-shot
+/cast !Auto Shot
+END
+VER 3 000000000000002A "H Pet" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nopet] Call Pet
+/cast [@pet, dead] Revive Pet
+/cast [@pet, nodead] Mend Pet
+END
+VER 3 0000000000000012 "H Pet Attack" "132140"
+/dismount
+/cast Dash(Rank 3)
+/cast Dive(Rank 3)
+/petattack [@mouseover,nodead,harm][]
+END
+VER 3 000000000000004B "H Pet Dismiss" "132331"
+/petdismiss
+END
+VER 3 000000000000001A "H Pet Passive" "132120"
+/petpassive
+END
+VER 3 0000000000000032 "H Pet Prowl" "132142"
+/cast Prowl(Rank 3)
+END
+VER 3 000000000000002C "H Scare Beast" "INV_MISC_QUESTIONMARK"
+#showtooltip Scare Beast
+/cast [@mouseover, harm] Scare Beast
+END
+VER 3 000000000000002D "H Scatter Shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/petpassive
+/stopattack
+/cast Scatter Shot
+END
+VER 3 000000000000002E "H Scorpid Sting" "INV_MISC_QUESTIONMARK"
+#showtooltip Scorpid Sting
+/cleartarget [dead][help]
+/targetenemy [noharm]
+/cast Scorpid Sting
+/cast !Auto Shot
+END
+VER 3 000000000000005E "H Scroll Agility" "135879"
+#showtooltip
+/use [@pet] Scroll of Agility IV
+END
+VER 3 0000000000000063 "H Scroll Prot" "132360"
+#showtooltip
+/use [@pet] Scroll of Protection IV
+END
+VER 3 0000000000000065 "H Scroll Stamina" "135881"
+#showtooltip
+/use [@pet] Scroll of Stamina IV
+END
+VER 3 000000000000005D "H Scroll Strengt" "236314"
+#showtooltip
+/use [@pet] Scroll of Strength IV
+END
+VER 3 000000000000002F "H Serpent Sting" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Serpent Sting
+/cast !Auto Shot
+END
+VER 3 0000000000000013 "H Shadowmeld" "INV_MISC_QUESTIONMARK"
+#showtooltip Shadowmeld
+/petpassive
+/stopattack
+/cast [combat] Feign Death
+/cast !Shadowmeld
+/cast !Prowl
+END
+VER 3 0000000000000047 "H Trap Explosive" "INV_MISC_QUESTIONMARK"
+#showtooltip Explosive Trap
+/petpassive [combat]
+/stopattack
+/stopcasting
+/cast [combat] Feign Death
+/cast Explosive Trap
+END
+VER 3 0000000000000048 "H Trap Freezing" "INV_MISC_QUESTIONMARK"
+#showtooltip Freezing Trap
+/petpassive
+/stopattack
+/stopcasting
+/cast [combat] Feign Death
+/cast Freezing Trap
+END
+VER 3 0000000000000049 "H Trap Frost" "INV_MISC_QUESTIONMARK"
+#showtooltip Frost Trap
+/petpassive [combat]
+/stopattack
+/stopcasting
+/cast [combat] Feign Death
+/cast Frost Trap
+END
+VER 3 000000000000004A "H Trap Immolatio" "INV_MISC_QUESTIONMARK"
+#showtooltip Immolation Trap
+/petpassive [combat]
+/stopattack
+/stopcasting
+/cast [combat] Feign Death
+/cast Immolation Trap
+END
+VER 3 0000000000000067 "H Trueshot Aura" "132329"
+#showtooltip Trueshot Aura
+/cast Trueshot Aura
+END
+VER 3 0000000000000030 "H Viper Sting" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Viper Sting
+/cast !Auto Shot
+END
+VER 3 0000000000000068 "H Wyvern Sting" "134400"
+#showtooltip Wyvern Sting
+/petpassive
+/stopattack
+/stopcasting
+/cast [combat] Feign Death
+/cast Wyvern Sting
+END
+VER 3 000000000000007A "K Berserker Rage" "INV_MISC_QUESTIONMARK"
+#showtooltip Berserker Rage
+/startattack
+/cast Berserker Stance
+/cast Berserker Rage
+END
+VER 3 0000000000000085 "K Bloodthirst" "136012"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast Bloodthirst
+END
+VER 3 0000000000000087 "K Charge" "132337"
+#showtooltip Charge
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast [nocombat] Battle Stance
+/cast Charge
+END
+VER 3 0000000000000089 "K Cleave" "132338"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Cleave
+/startattack
+END
+VER 3 0000000000000072 "K Disarm" "INV_MISC_QUESTIONMARK"
+#showtooltip Disarm
+/startattack
+/cast Defensive Stance
+/cast Disarm
+END
+VER 3 000000000000008A "K Execute" "135358"
+#showtooltip Execute
+/startattack
+/stopcasting
+/cast [form:2] Battle Stance
+/cast Execute
+END
+VER 3 000000000000008B "K Hamstring" "132316"
+#showtooltip Hamstring
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast [form:2] Battle Stance
+/cast Hamstring
+END
+VER 3 0000000000000088 "K Heroic Strike" "132282"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Heroic Strike
+/startattack
+END
+VER 3 000000000000008C "K Intercept" "132307"
+#showtooltip Intercept
+/startattack
+/cast Berserker Stance
+/cast Intercept
+END
+VER 3 0000000000000075 "K Intimid. Shout" "INV_MISC_QUESTIONMARK"
+#showtooltip Intimidating Shout
+/cleartarget [dead][help]
+/targetenemy [noexists]
+/stopattack
+/cast Intimidating Shout
+END
+VER 3 000000000000006F "K Mocking Blow" "INV_MISC_QUESTIONMARK"
+#showtooltip Mocking Blow
+/startattack
+/cast Battle Stance
+/cast [@mouseover,harm,nodead][] Mocking Blow
+END
+VER 3 000000000000008F "K Motral Strike" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast Mortal Strike
+END
+VER 3 0000000000000073 "K Overpower" "INV_MISC_QUESTIONMARK"
+#showtooltip Overpower
+/startattack
+/stopcasting
+/cast Battle Stance
+/cast Overpower
+END
+VER 3 000000000000008E "K Pummel" "132938"
+#showtooltip Pummel
+/startattack
+/cast [form:1/2,worn:Shields] Shield Bash
+/cast [noworn:Shields] Berserker Stance
+/cast [form:3] Pummel
+END
+VER 3 000000000000007F "K Recklesness" "132109"
+#showtooltip Recklessness
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast Berserker Stance
+/cast Recklessness
+END
+VER 3 000000000000007C "K Rend" "132155"
+#showtooltip Rend
+/startattack
+/cast [form:3] Battle Stance
+/cast Rend
+END
+VER 3 000000000000007E "K Retaliation" "INV_MISC_QUESTIONMARK"
+#showtooltip Retaliation
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/startattack
+/cast Battle Stance
+/cast Retaliation
+END
+VER 3 000000000000007D "K Revenge" "132353"
+#showtooltip Revenge
+/startattack
+/stopcasting
+/cast Defensive Stance
+/cast Revenge
+END
+VER 3 0000000000000081 "K Revenge OP" "134400"
+#showtooltip [form:2] Revenge; [form:1/3] Overpower
+/startattack
+/stopcasting
+/cast [form:3] Battle Stance
+/cast [form:2] Revenge; [form:1] Overpower
+END
+VER 3 0000000000000071 "K Sunder Armor" "INV_MISC_QUESTIONMARK"
+#showtooltip Sunder Armor
+/startattack
+/cast Sunder Armor
+END
+VER 3 0000000000000086 "K Sweep. Strikes" "INV_MISC_QUESTIONMARK"
+#showtooltip Sweeping Strikes
+/startattack
+/stopcasting [form:2/3]
+/cast Battle Stance
+/cast Sweeping Strikes
+END
+VER 3 000000000000006E "K Taunt" "INV_MISC_QUESTIONMARK"
+#showtooltip Taunt
+/startattack [harm,nodead]
+/cast Defensive Stance
+/cast [][@mouseover,harm,nodead] Taunt
+END
+VER 3 0000000000000084 "K Whirlwind" "132369"
+#showtooltip Whirlwind
+/startattack
+/stopcasting [form:1/2]
+/cast Berserker Stance
+/cast Whirlwind
+END
+VER 3 0000000000000091 "R Ambush" "INV_MISC_QUESTIONMARK"
+#showtooltip 
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [stealth] Ambush; [nostealth] Backstab
+/startattack [nostealth]
+END
+VER 3 0000000000000092 "R AR/CB" "135988"
+#showtooltip
+/cast Cold Blood
+/cast Adrenaline Rush
+END
+VER 3 0000000000000098 "R Blade Flurry" "INV_MISC_QUESTIONMARK"
+#showtooltip blade flurry
+/cast blade flurry
+END
+VER 3 0000000000000099 "R Cancel BF" "INV_MISC_QUESTIONMARK"
+#showtooltip blade flurry
+/cancelaura blade flurry
+END
+VER 3 0000000000000093 "R CB Backstab" "135988"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Cold Blood
+/cast [stealth] Ambush
+/cast Backstab
+/startattack [nostealth]
+END
+VER 3 0000000000000094 "R CB Eviscerate" "135988"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Cold Blood
+/cast Eviscerate
+/startattack
+END
+VER 3 0000000000000096 "R Cheap Shot" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [stealth]cheap shot; [nostealth]kidney shot
+END
+VER 3 0000000000000076 "R Distract" "132289"
+#showtooltip
+/cast [@cursor] Distract
+END
+VER 3 0000000000000095 "R Garrote" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [stealth]garrote; [nostealth]rupture
+END
+VER 3 0000000000000090 "R Gouge" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [stealth] Sap; [nostealth] Gouge
+END
+VER 3 0000000000000097 "R Sap" "132310"
+#showtooltip Sap
+/cast !Stealth
+/cast Sap
+END
+VER 3 000000000000009A "R SinisterStrike" "136189"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast Sinister Strike
+/startattack
+END
+VER 3 000000000000009C "R Thistle Tea" "132819"
+#showtooltip Thistle Tea
+/use [combat] Thistle Tea
+END
+VER 3 000000000000009B "R Vanish" "132331"
+#showtooltip Vanish
+/cast [combat] !Vanish
+END
+VER 3 0000000000000080 "W Demon Ability" "136172"
+#showtooltip
+/cast Sacrifice
+/cast [@target][@player] Fire Shield(Rank 3)
+/cast Seduction
+/cast Spell Lock(Rank 1)
+END
+VER 3 000000000000005B "W Drain Soul" "134400"
+#showtooltip Drain Soul
+/stopcasting
+/cast Drain Soul(Rank 1)
+END
+VER 3 0000000000000058 "W Summon" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast Ritual of Summoning 
+/ra Summoning %t
+/p Summoning %t
+END

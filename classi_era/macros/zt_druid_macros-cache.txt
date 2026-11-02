@@ -1,0 +1,116 @@
+VER 3 0000000001000002 "D Abolish Poison" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast [@mouseover,help][] Abolish Poison
+END
+VER 3 0000000001000009 "D Bash" "INV_MISC_QUESTIONMARK"
+#showtooltip [nostealth] Bash; [stealth] Pounce
+/cancelform [noform:1,noform:3]
+/cast [noform:1,noform:3] Dire Bear Form
+/cast [form:1] Bash; [form:3] Pounce
+/startattack [nostealth]
+END
+VER 3 0000000001000001 "D Bear Form" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:1]
+/cast !Dire Bear Form
+/startattack
+END
+VER 3 0000000001000012 "D Cat Form" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:3]
+/cast !Cat Form
+/startattack
+END
+VER 3 0000000001000008 "D Claw Swipe" "INV_MISC_QUESTIONMARK"
+#showtooltip [form:1] Swipe; [] Claw
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cast [form:1] Swipe; [form:3] Claw
+/startattack [nostealth]
+END
+VER 3 0000000001000004 "D Ent. Roots" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:5]
+/cast Entangling Roots
+END
+VER 3 0000000001000010 "D Faerie Fire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:1/3]
+/cast [form:1/3] Faerie Fire (feral); [] Faerie Fire
+/startattack
+END
+VER 3 0000000001000013 "D Feral Charge" "INV_MISC_QUESTIONMARK"
+#showtooltip Feral Charge
+/stopcasting
+/cancelform [noform:1]
+/cast [noform:1] Dire Bear Form
+/cast Feral Charge
+END
+VER 3 000000000100000D "D Healing T. low" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast [@mouseover,help][] Healing Touch(Rank 5)
+END
+VER 3 0000000001000005 "D Healing Touch" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast [@mouseover,help][] Healing Touch
+END
+VER 3 0000000001000011 "D Hiberbnate" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:5]
+/cast Hibernate
+END
+VER 3 000000000100000F "D Insect Swarm" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast Insect Swarm
+END
+VER 3 0000000001000006 "D Moonfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:5]
+/cast Moonfire
+END
+VER 3 000000000100000A "D Regrowth" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast [@mouseover,help][] Regrowth
+END
+VER 3 0000000001000007 "D Rejuvanation" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cancelform
+/cast [@mouseover,help][] Rejuvenation
+END
+VER 3 000000000100000E "D Starfire" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:5]
+/cast Starfire
+END
+VER 3 000000000100000C "D Travel Form" "132128"
+#showtooltip Travel Form
+/stopcasting
+/cancelform [noform:2/4][combat]
+/use [swimming]Aquatic Form;Travel Form
+END
+VER 3 000000000100000B "D Wrath" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cleartarget [dead,help]
+/targetenemy [noharm]
+/cancelform [noform:5]
+/cast Wrath
+END

@@ -1,0 +1,21 @@
+VER 3 0000000001000024 "E detail" "132862"
+/3 ENCHANTRESS{Moon}  CHEST +4Stats/100hp/100mana WEAPON Crusader/+5dps/+15Agi/+25Agi/+55HealP/+22Int GLOVES Heal-/Fire-/Frost-/Shadowpower/+15Agi CLOAK Dodge/Subtlety/+5 Res BRACER +9Str/+9Stam/+24HealP/+7Int BOOTS Speed/+7Agi {Moon} and many more!
+END
+VER 3 0000000001000021 "E NE BiS" "132880"
+/3 {Moon} Nightelf Enchantress available to infuse your equipment with arcane power! All PvE BiS Enchants at disposal. Succeed with the ancient Nightelf arts! {Moon} /w me "inv"
+END
+VER 3 0000000001000025 "E tip" "133786"
+/p Tip whatever seems fair to you! Everyone has different financial capabilities. The only exception to this is Greater Stats on Chest. That is a >50k enchant and I need to get the money back at some point.
+END
+VER 3 000000000100002D "Eye of Nerub" "134400"
+#showtooltip The Eye of Nerub
+/equipslot 16 The Eye of Nerub
+END
+VER 3 000000000100002E "Kingsfall HoD" "134400"
+#showtooltip 
+/equipslot 16 Kingsfall
+/equipslot 17 Harbinger of Doom
+END
+VER 3 000000000100002F "Pull Ghouls" "237511"
+/rw {Moon} Pulling Ghouls {Moon} 
+END
